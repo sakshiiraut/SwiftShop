@@ -1,0 +1,151 @@
+.product-wrapper {
+    background-color: #bfdbf7;
+    padding: 40px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-page {
+    display: flex;
+    gap: 40px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .product-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E1E5F2;
+    padding: 20px;
+  }
+  
+  .product-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .product-details {
+    flex: 2;
+    padding: 20px;
+  }
+  
+  .shirt-heading {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1F7A8C;
+  }
+  
+  .rating {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .star {
+    color: #ffcc00;
+  }
+  
+  .price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #022B3A;
+  }
+  
+  .color {
+    margin-bottom: 20px;
+  }
+  
+  .color-options {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .color-option {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .size {
+    margin-bottom: 20px;
+  }
+  
+  .size-options label {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  .size-options input {
+    margin-right: 8px;
+  }
+  
+  .product-description {
+    margin-bottom: 30px;
+  }
+  
+  .description-heading {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #1F7A8C;
+  }
+  
+  .description-list {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+  }
+  
+  .description-list li {
+    margin-bottom: 10px;
+  }
+  
+  .buy-button {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .cart-button, .list-button {
+    flex: 1;
+    background-color: #1F7A8C;
+    color: #FFFFFF;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .cart-button:hover, .list-button:hover {
+    background-color: #022B3A;
+  }
+  
+  @media (max-width: 768px) {
+    .product-page {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .product-image {
+      padding: 20px 0;
+    }
+  
+    .product-details {
+      padding: 20px 0;
+    }
+  }

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+
+.scan-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.scan-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  width: 90vw;
+  max-width: 400px;
+  padding: 20px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+}
+
+.scan-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scan-loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid #68C3D4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFE8D1;
+  color: #568EA3;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#scan-status-message {
+  color: #568EA3;
+  font-size: 18px;
+}
+
+.scan-button-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.scan-btn {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid #568EA3;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: #568EA3;
+  color: #FFFFFF;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+}
+
+#cancelbooking{
+background-color: red;
+}
+.scan-wrapper{
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,79,121,1) 25%, rgba(0,212,255,1) 100%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scan-btn:hover {
+  background: #FFFFFF;
+  color: #568EA3;
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  transition: all 0.2s ease-out;
+}
+
+.scan-btn:hover::before {
+  animation: scan-shine 0.5s 0s linear;
+}
+
+.scan-btn::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0;
+  opacity: 0;
+  background: #FFFFFF;
+  box-shadow: 0 0 50px 30px #FFFFFF;
+  transform: skewX(-20deg);
+}
+
+@keyframes scan-shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.scan-btn:active {
+  box-shadow: 0 0 0 0 transparent;
+  transition: box-shadow 0.2s ease-in;
+}

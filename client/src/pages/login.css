@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 50px auto;
+    max-width: 800px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+    flex: 1;
+    background: url('../assets/uilogin.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.back-button {
+    align-self: flex-start;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.left-section h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.right-section {
+    flex: 1;
+    background: linear-gradient(to right, #005bea, #00c6fb);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.right-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.right-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-section input {
+    margin-bottom: 10px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.right-section input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.right-section label {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.right-section button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+    background-color: #ada8fa;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.right-section button:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.social-button.google {
+    background-color: #DB4437;
+}
+
+.social-button.apple {
+    background-color: #000000;
+}
+
+.social-button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.sign-in {
+    text-align: center;
+    margin: 10px 0 20px;
+    font-size: 14px;
+}
+
+.sign-in a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        height: 500px;
+    }
+
+    .social-buttons {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
