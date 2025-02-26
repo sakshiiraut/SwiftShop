@@ -97,7 +97,7 @@ let brand,price,size;
     </section>
 
     <footer className="footer">
-        <p>&copy; 2024 Walmart</p>
+        <p>&copy; 2024 SwiftShop</p>
     </footer>
 
 
