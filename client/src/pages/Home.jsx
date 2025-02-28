@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { UseCardContext } from '../contextapi/cardcontext'
 import { useNavigate } from 'react-router-dom';
+import logo from "../assets/image.png";
 const Home = () => {
   const navigate = useNavigate();
   const {cards,ApplyPriceFilter} = UseCardContext();
@@ -21,22 +22,55 @@ let brand,price,size;
         ApplyPriceFilter(brand,size,price);
      
     } catch (error) {
-        
+      console.log(error);
     }finally{
-
+      // cleanup or final actions if needed
     }
     
   }
   return <>
 
     <header className="header-container">
-        <div className="walmart-name">SwiftShop</div>
+    <div className="walmart-name" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+  <span style={{ fontWeight: "bold", fontSize: "24px" }}>SwiftShop</span>
+  <img 
+    src={logo} 
+    alt="Logo" 
+    style={{ 
+      width: "35px", 
+      height: "35px", 
+      borderRadius: "50%", 
+      objectFit: "cover", 
+      marginLeft: "-2px", 
+      border: "2px solid white", 
+      boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)", 
+      backgroundColor: "#fff", 
+      padding: "2px"
+    }} 
+  />
+</div>
         <input type="text" className="search-bar" placeholder="What's on your mind?"/>
         <div className="button-group">
             <button> Hot Deals </button>
             <button    onClick={()=>{navigate("/Qrscanner")}}  >Scan QR</button>
             <button    onClick={()=>{navigate("/Login")}} >Sign In</button>
-            <button className="profile-button"><i className="fa-solid fa-user"></i></button>
+            <button className="profile-button p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition duration-200">
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    fill="none" 
+    viewBox="0 0 24 24" 
+    strokeWidth="1.5" 
+    stroke="currentColor" 
+    className="w-6 h-6 text-gray-700"
+  >
+    <path 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+      d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" 
+    />
+  </svg>
+</button>
+
         </div>
     </header>
 
